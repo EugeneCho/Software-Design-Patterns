@@ -27,7 +27,7 @@ public sealed class Client
 
 public class CheckMortgage
 {
-    static void Main(string[] args)
+    public CheckMortgage()
     {
         // Create a new client profile
         Client client = Client.GetInstance();
@@ -38,7 +38,7 @@ public class CheckMortgage
         Console.WriteLine("-------------------------------------------------------");
 
         // Add Downpayment
-        client.SetMortgage(new Downpayment(client.GetMortgage()) { ProductName="Downpayment", Amount = 400000 });
+        client.SetMortgage(new Downpayment(client.GetMortgage()) { ProductName = "Downpayment", Amount = 400000 });
         Console.WriteLine("Remaining Mortgage: " + client.GetMortgageAmount());
         Console.WriteLine("-------------------------------------------------------");
 
@@ -48,10 +48,10 @@ public class CheckMortgage
         Console.WriteLine("-------------------------------------------------------");
 
         // Add ProvinceSupport
-        client.SetMortgage(new ProvinceSupport(client.GetMortgage()) { ProductName = "Province Support", Amount = 100000});
+        client.SetMortgage(new ProvinceSupport(client.GetMortgage()) { ProductName = "Province Support", Amount = 100000 });
         Console.WriteLine("Remaining Mortgage: " + client.GetMortgageAmount());
         Console.WriteLine("-------------------------------------------------------");
-        
     }
+
 }
 

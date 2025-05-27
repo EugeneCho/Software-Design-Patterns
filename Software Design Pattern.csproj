@@ -8,4 +8,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Decorator Pattern\obj\**" />
+    <EmbeddedResource Remove="Decorator Pattern\obj\**" />
+    <None Remove="Decorator Pattern\obj\**" />
+  </ItemGroup>
+
 </Project>
